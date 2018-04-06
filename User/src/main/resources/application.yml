@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user
+
+server:
+  port: 7777
+
+logging:
+  level:
+    com.accelya: DEBUG
+
+say-hello:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8888,localhost:8889
+    ServerListRefreshInterval: 15000
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#
